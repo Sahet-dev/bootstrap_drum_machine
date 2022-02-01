@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+    <title>Drum Machine</title>
+
+    <script type="text/javascript">
+
+    function play(str){
+
+      if(str === "q" || str === "Q"){
+        document.getElementById('display').innerText = "Small-Tom-Drum-Hit-Level-6A-www.fesliyanstudios.com";
+      } else if (str === "w" || str === "W") {
+        document.getElementById('display').innerText = "Floor-Tom-Drum-Hit-Level-7A-www.fesliyanstudios.com";
+      } else if (str === "a" || str === "A") {
+        document.getElementById('display').innerText = "Hi-Hat-Closed-Hit-B1-www.fesliyanstudios.com";
+      } else if (str === "e" || str === "A") {
+        document.getElementById('display').innerText = "mixkit-drum-and-percussion-545";
+      } else if (str === "s" || str === "S") {
+        document.getElementById('display').innerText = "mixkit-hand-tribal-drum-562";
+      } else if (str === "d" || str === "D") {
+        document.getElementById('display').innerText = "mixkit-spring-metal-hit-2302";
+      } else if (str === "z" || str === "Z") {
+        document.getElementById('display').innerText = "Drum-Sticks-Hit-D-www.fesliyanstudios.com";
+      } else if (str === "x" || str === "X") {
+        document.getElementById('display').innerText = "mixkit-toy-drums-and-bell-ding-560";
+      } else if (str === "c" || str === "C") {
+        document.getElementById('display').innerText = "Snare-Drum-Hit-Level-3b-www.fesliyanstudios.com";
+      }
+
+
+
+      var audio = document.getElementById(str);
+      audio.play();
+    }
+
+    window.document.onkeyup = function (event){
+      keystroke = event.key;
+      if (keystroke==="q" || keystroke==="Q"){
+        play("Q");
+      } else if (keystroke==="w" || keystroke==="W"){
+        play("W");
+      }else if (keystroke==="a" || keystroke==="A"){
+        play("A");
+      }else if (keystroke==="e" || keystroke==="E"){
+        play("E");
+      }else if (keystroke==="s" || keystroke==="S"){
+        play("S");
+      }else if (keystroke==="d" || keystroke==="D"){
+        play("D");
+      }else if (keystroke==="z" || keystroke==="Z"){
+        play("Z");
+      }else if (keystroke==="x" || keystroke==="X"){
+        play("X");
+      }else if (keystroke==="c" || keystroke==="C"){
+        play("C");
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+
+<script src=" https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+
+    <div class="container" id="drum-machine">
+          <h1 class="text-center">Drum Machine</h1>
+          <div class="card my-3">
+            <div class="card-body">
+              <div class="text-center" id="display">Nothing Yet to Display</div>
+            </div>
+          </div>
+
+          <div class="col-xs-4 col-sm-4 col-md-4 mx-auto">
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-0" onclick="play('Q')">
+              Q
+              <audio src="./clip/Small-Tom-Drum-Hit-Level-6A-www.fesliyanstudios.com.mp3" class="clip" id="Q">
+            </button>
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-1" onclick="play('W')">
+              W
+              <audio src="./clip/Floor-Tom-Drum-Hit-Level-7A-www.fesliyanstudios.com.mp3" class="clip" id="W">
+            </button>
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-2" onclick="play('E')">
+              E
+              <audio src="./clip/au3.mp3" class="clip" id="E">
+            </button>
+
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 mx-auto">
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-3" onclick="play('A')">
+              A
+              <audio src="./clip/au4.wav" class="clip" id="A">
+            </button>
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-4" onclick="play('S')">
+              S
+              <audio src="./clip/au5.wav" class="clip" id="S">
+            </button>
+            <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-5" onclick="play('D')">
+              D
+              <audio src="./clip/mixkit-spring-metal-hit-2302.wav" class="clip" id="D">
+            </button>
+
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 mx-auto">
+
+
+          <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-6" onclick="play('Z')">
+            Z
+            <audio src="./clip/Drum-Sticks-Hit-D-www.fesliyanstudios.com.mp3" class="clip" id="Z">
+          </button>
+          <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-7" onclick="play('X')">
+            X
+            <audio src="./clip/au8.wav" class="clip" id="X">
+          </button>
+          <button class="drum-pad btn btn-block btn-primary p-4 mx-auto" id="drum-8" onclick="play('C')">
+            C
+            <audio src="./clip/mixkit-ominous-drums-appear-228.wav" class="clip" id="C">
+          </button>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
